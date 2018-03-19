@@ -1,7 +1,7 @@
 // create a new instance of ChatEngine
 ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-c0dccd06-bff6-45fa-bebe-b5b6ef894fe8',
-    subscribeKey: 'sub-c-574ac71e-2857-11e8-8305-f27a6a4e1feb'
+    publishKey: 'YOUR_PUBNUB_PUBLISH_KEY',
+    subscribeKey: 'YOUR_PUBNUB_SUBSCRIBE_KEY'
 });
 
 
