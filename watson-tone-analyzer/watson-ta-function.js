@@ -7,23 +7,7 @@ function process(request) {
     const auth = require('codec/auth');
     //console.log(request.message);
   
-  /*
-      {
-  "tone_analyzer": [
-    {
-      "name": "tone-analyzer-bylat-tone-analy-1521124259114",
-      "plan": "lite",
-      "credentials": {
-        "url": "https://gateway.watsonplatform.net/tone-analyzer/api",
-        "username": "1d6be8af-4c31-43c1-8aba-20821aca98a9",
-        "password": "P3pmjRwULfVc"
-      }
-    }
-  ]
-}
-
-  */
-
+  
     if (request.message.data.type == 'REQUEST')
     {
         console.log ("Request to analyze " + request.message.data.text);
@@ -32,9 +16,9 @@ function process(request) {
         TODO: fill values
       */
         // Watson Tone Analyzer Service credential - User name
-      let taUsername = '1d6be8af-4c31-43c1-8aba-20821aca98a9';
+      let taUsername = 'YOUR_WATSON_TONE_ANALYZER_USERNAME';
       // Watson Tone Analyzer Service credential -  Password
-      let taPassword = 'P3pmjRwULfVc';
+      let taPassword = 'YOUR_WATSON_TONE_ANALYZER_PASSWORD';
 
       let taUrl = 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21'
 
