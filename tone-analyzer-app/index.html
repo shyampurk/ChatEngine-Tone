@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chat tone analyzer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chat-engine@0.8.4/dist/chat-engine.min.js" type="text/javascript"></script>
+
+  
+
+
+</head>
+<body>
+ 
+<div class="container">
+ 
+  <h3 align="center">Chat Analysis with Watson Tone Analyzer</h3>
+
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+        <div class="panel-group">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">All Chat messages   <span class="badge" id="AllMessagesCount">0</span></div>
+            <div class="panel-body" id= "AllMessagesPanel" style="height: 540px; max-height: 540px; overflow: auto">
+
+
+      <!--- 
+        
+              <p data-toggle='popover' title='Tone' data-content='Angry: 0.75, Fear: 0.89'  data-trigger='hover' data-placement='top'>Sample text </p>
+      -->
+
+            </div>
+          </div>
+
+      </div>   <!--- end class panel group for sm4-->
+      
+    </div>    <!--- end class col sm4-->
+
+    <div class="col-md-4">
+      <div class="panel-group">
+          <div class="panel panel-success">
+            <div class="panel-heading">Emotion:Joy  &#x263A <span class="badge" id="JoyMessagesCount">0</span>  </div>
+            <div class="panel-body" id="JoyMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto"></div>
+          </div>
+
+
+
+          <div class="panel panel-danger">
+            <div class="panel-heading">Emotion:Anger   <span class="badge" id="AngerMessagesCount">0</span></div>
+            <div class="panel-body" id="AngerMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto">
+            </div>
+          </div>
+
+          <div class="panel panel-warning">
+            <div class="panel-heading">Emotion:Fear   <span class="badge" id="FearMessagesCount">0</span></div>
+            <div class="panel-body" id="FearMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto">
+              
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading" style= "background-color: black; color:white">Emotion:Sadness   <span class="badge" id="SadMessagesCount">0</span></div>
+            <div class="panel-body" id="SadMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto">
+              
+            </div>
+          </div>
+
+
+</div>   <!---end  <div class="panel-group"> of sm4 1st -->
+
+    </div>    <!--- end div col md-4 1st  -->
+
+  <div class="col-md-4">
+      <div class="panel-group">
+
+          <div class="panel panel-info">
+            <div class="panel-heading">Language:Analytical  <span class="badge" id="AnalyticalMessagesCount">0</span></div>
+            <div class="panel-body" id="AnalyticalMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto"> 
+            
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">Language:Confident   <span class="badge" id="ConfidentMessagesCount">0</span></div>
+            <div class="panel-body" id="ConfidentMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto"></div>
+          </div>
+
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading"  style= "background-color:grey; color:white">Language:Tentative   <span class="badge" id="TentativeMessagesCount">0</span>  </div>
+            <div class="panel-body" id="TentativeMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto"></div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading"  style= "background-color:darkgrey; color:white">Uncategorized   <span class="badge" id="UncategorizedMessagesCount">0</span>  </div>
+            <div class="panel-body" id="UncategorizedMessagesPanel" style="height: 100px; max-height: 100px; overflow: auto"></div>
+          </div>
+          
+        </div>   <!---end  <div class="panel-group"> of sm4 2nd -->
+
+    </div>    <!--- end div col md-4 2nd  -->
+
+
+  </div>  <!--- end div row -->
+
+</div>  <!--end class="container"-->
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+
+
+</body>
+
+
+<script src = "analyze.js" type="text/javascript"></script>
+
+</html>
